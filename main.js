@@ -17,8 +17,8 @@
   hashTable.put('但','wjg')
   hashTable.put('时','jf')
   hashTable.put('人','w')
-  hashTable.print10();
-  console.log('--------------------------------')
+  hashTable.print5();
+  console.log('--------------------------------\n Hashtable Version 0.5 Below \n--------------------------------')
   hashTablev05.put('工', 'a')
   hashTablev05.put('式','aa')
   hashTablev05.put('以','c')
@@ -40,12 +40,16 @@
   hashTablev05.put('永','yni')
   hashTablev05.put('华','wxf')
   hashTablev05.put('他','wb')
+  hashTablev05.put('来','go')
+  hashTablev05.put('籍','tdij')
   hashTablev05.printTable();
   console.log(hashTablev05.get('wjg'))
   console.log(hashTablev05.get('c'))
   console.log(hashTablev05.get('jf'))
   console.log(hashTablev05.get('wq'))
+  console.log(hashTablev05.get('tdij'))
   console.log(hashTablev05.get('a'))
   console.log(hashTablev05.get('b'))
+  console.log(hashTablev05.get('go'))
   console.log(hashTablev05.get('wxf'))
 })()

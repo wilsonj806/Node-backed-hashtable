@@ -103,6 +103,7 @@ class HashTable {
   size() { return this.table.length }
   entries() { return this.entries }
 
+  print5 = () => printN(this.table,5)
   print10 = () => printN(this.table,10)
   print25 = () => printN(this.table,25)
   printTable = () => printN(this.table, this.entries)
