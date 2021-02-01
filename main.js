@@ -1,5 +1,6 @@
 (() => {
   // NOTE THE HASH TABLE DOES NOT HANDLE SPACE SEPARATED CHARACTERS
+  //... NOR DOES IT HANDLE DUPLICATES
   const HashTable = require('./hashTableV0')
   const HashTableV05 = require('./hashTableV05')
 

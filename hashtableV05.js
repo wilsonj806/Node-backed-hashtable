@@ -30,7 +30,7 @@ class HashTable {
     let hashedKey = this.generateKey(wubiCode);
     if (this.occupied(hashedKey)) {
       let stopIndex = hashedKey
-      if (stopIndex == this.table.length - 1) {
+      if (hashedKey == this.table.length - 1) {
         // Wrap around if we hit the end
         hashedKey = 0
       } else {
