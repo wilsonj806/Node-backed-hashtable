@@ -29,6 +29,7 @@ class HashTable {
   put(cnChar, wubiCode) {
     let hashedKey = this.generateKey(wubiCode);
     if (this.occupied(hashedKey)) {
+      console.log(`${hashedKey} index occupied, ${cnChar} will be located in a new index`)
       let stopIndex = hashedKey
       if (hashedKey == this.table.length - 1) {
         // Wrap around if we hit the end
@@ -59,12 +60,24 @@ class HashTable {
   }
 
   remove(code) {
-    const hashedKey = find(code)
+    const hashedKey = this.find(code)
     if (hashedKey === -1) {
       return null
     }
     const wubiPair = this.table[hashedKey]
     this.table[hashedKey] = null
+
+    // Rehashing the table
+    console.log(`Rehashing the table to accomodate for removal of ${wubiPair[0]}`)
+    const oldTable = [...this.table]
+    this.table = []
+    for (let i = 0; i< oldTable.length; i++) {
+      if (oldTable[i] != null) {
+        this.put(oldTable[i][0], oldTable[i][1])
+      }
+    }
+
+
     return wubiPair
   }
 

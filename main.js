@@ -29,6 +29,8 @@
   hashTablev05.put('了','b')
   hashTablev05.put('的','r')
   hashTablev05.put('但','wjg')
+  hashTablev05.put('笔','tt')
+  hashTablev05.put('扫','rv')
   hashTablev05.put('时','jf')
   hashTablev05.put('人','w')
   hashTablev05.put('下','gh')
@@ -43,14 +45,14 @@
   hashTablev05.put('他','wb')
   hashTablev05.put('来','go')
   hashTablev05.put('籍','tdij')
+  hashTablev05.put('如','vk')
+  hashTablev05.put('果','js')
   hashTablev05.printTable();
-  console.log(hashTablev05.get('wjg'))
-  console.log(hashTablev05.get('c'))
-  console.log(hashTablev05.get('jf'))
-  console.log(hashTablev05.get('wq'))
-  console.log(hashTablev05.get('tdij'))
-  console.log(hashTablev05.get('a'))
-  console.log(hashTablev05.get('b'))
-  console.log(hashTablev05.get('go'))
-  console.log(hashTablev05.get('wxf'))
+  // NOTE You would probably actually run into rehashing issues
+  //... but javascript arrays are dynamic so it's already bumping entries back up
+  hashTablev05.remove('wq')
+  hashTablev05.remove('ugdu')
+  console.log('--------------------------------\n Reprinting Table\n--------------------------------')
+  hashTablev05.printTable()
+
 })()
